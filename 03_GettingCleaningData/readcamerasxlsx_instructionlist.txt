@@ -1,0 +1,20 @@
+To run readcamerasxlsx file:
+
+In R Studio:
+
+Step 1: source("readcamerasxlsx.R")
+Step 2: readcamerasxlsx()
+
+EXAMPLE OUTCOME:
+> source("readcamerasxlsx.R")
+> readcamerasxlsx()
+trying URL 'https://data.baltimorecity.gov/api/views/dz54-2aru/rows.xlsx?accessType=DOWNLOAD'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet; charset=utf-8' length 9915 bytes
+downloaded 9915 bytes
+
+Loading required package: rJava
+Loading required package: xlsxjars
+  direction      street
+1       N/B   Caton Ave
+2       S/B   Caton Ave
+3       E/B Wilkens Ave

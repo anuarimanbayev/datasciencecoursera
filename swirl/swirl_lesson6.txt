@@ -1,0 +1,488 @@
+| Please choose a lesson, or type 0 to return to course menu.
+
+ 1: Basic Building Blocks      2: Workspace and Files     
+ 3: Sequences of Numbers       4: Vectors                 
+ 5: Missing Values             6: Subsetting Vectors      
+ 7: Matrices and Data Frames   8: Logic                   
+ 9: Functions                 10: lapply and sapply       
+11: vapply and tapply         12: Looking at Data         
+13: Simulation                14: Dates and Times         
+15: Base Graphics             
+
+Selection: 6
+
+
+  |                                                                                     
+  |                                                                               |   0%
+
+| In this lesson, we'll see how to extract elements from a vector based on some
+| conditions that we specify.
+
+...
+
+
+  |                                                                                     
+  |==                                                                             |   3%
+| For example, we may only be interested in the first 20 elements of a vector, or only
+| the elements that are not NA, or only those that are positive or correspond to a
+| specific variable of interest. By the end of this lesson, you'll know how to handle
+| each of these scenarios.
+
+...
+
+
+  |                                                                                     
+  |====                                                                           |   5%
+| I've created for you a vector called x that contains a random ordering of 20 numbers
+| (from a standard normal distribution) and 20 NAs. Type x now to see what it looks
+| like.
+
+> x
+ [1] -0.066588660           NA           NA           NA -0.459612719           NA
+ [7] -0.959465546 -0.422826329           NA           NA  0.418330725 -0.370869957
+[13] -0.057653389  1.680559734           NA           NA  1.633678001           NA
+[19]           NA           NA -0.007091671           NA -0.661434927           NA
+[25]  1.779417722 -0.635025720 -0.451328531 -1.685815353           NA           NA
+[31]  0.866236282  0.731491048           NA  0.790569758           NA           NA
+[37]  0.077030749           NA  2.568255443           NA
+
+| You are quite good my friend!
+
+
+  |                                                                                     
+  |======                                                                         |   8%
+| The way you tell R that you want to select some particular elements (i.e. a 'subset')
+| from a vector is by placing an 'index vector' in square brackets immediately following
+| the name of the vector.
+
+...
+
+
+  |                                                                                     
+  |========                                                                       |  11%
+| For a simple example, try x[1:10] to view the first ten elements of x.
+
+> x[1:10]
+ [1] -0.06658866          NA          NA          NA -0.45961272          NA -0.95946555
+ [8] -0.42282633          NA          NA
+
+| You're the best!
+
+
+  |                                                                                     
+  |==========                                                                     |  13%
+| Index vectors come in four different flavors -- logical vectors, vectors of positive
+| integers, vectors of negative integers, and vectors of character strings -- each of
+| which we'll cover in this lesson.
+
+...
+
+
+  |                                                                                     
+  |============                                                                   |  16%
+| Let's start by indexing with logical vectors. One common scenario when working with
+| real-world data is that we want to extract all elements of a vector that are not NA
+| (i.e. missing data). Recall that is.na(x) yields a vector of logical values the same
+| length as x, with TRUEs corresponding to NA values in x and FALSEs corresponding to
+| non-NA values in x.
+
+...
+
+
+  |                                                                                     
+  |===============                                                                |  18%
+| What do you think x[is.na(x)] will give you?
+
+1: A vector of length 0
+2: A vector of TRUEs and FALSEs
+3: A vector of all NAs
+4: A vector with no NAs
+
+Selection: 3
+
+| Excellent work!
+
+
+  |                                                                                     
+  |=================                                                              |  21%
+| Prove it to yourself by typing x[is.na(x)].
+
+> x[is.na(x)]
+ [1] NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA
+
+| Great job!
+
+
+  |                                                                                     
+  |===================                                                            |  24%
+| Recall that `!` gives us the negation of a logical expression, so !is.na(x) can be
+| read as 'is not NA'. Therefore, if we want to create a vector called y that contains
+| all of the non-NA values from x, we can use y <- x[!is.na(x)]. Give it a try.
+
+> y <- x[!is.na(x)]
+
+| Excellent work!
+
+
+  |                                                                                     
+  |=====================                                                          |  26%
+| Print y to the console.
+
+> y
+ [1] -0.066588660 -0.459612719 -0.959465546 -0.422826329  0.418330725 -0.370869957
+ [7] -0.057653389  1.680559734  1.633678001 -0.007091671 -0.661434927  1.779417722
+[13] -0.635025720 -0.451328531 -1.685815353  0.866236282  0.731491048  0.790569758
+[19]  0.077030749  2.568255443
+
+| That's the answer I was looking for.
+
+
+  |                                                                                     
+  |=======================                                                        |  29%
+| Now that we've isolated the non-missing values of x and put them in y, we can subset y
+| as we please.
+
+...
+
+
+  |                                                                                     
+  |=========================                                                      |  32%
+| Recall that the expression y > 0 will give us a vector of logical values the same
+| length as y, with TRUEs corresponding to values of y that are greater than zero and
+| FALSEs corresponding to values of y that are less than or equal to zero. What do you
+| think y[y > 0] will give you?
+
+1: A vector of all NAs
+2: A vector of TRUEs and FALSEs
+3: A vector of all the positive elements of y
+4: A vector of length 0
+5: A vector of all the negative elements of y
+
+Selection: 3
+
+| Excellent work!
+
+
+  |                                                                                     
+  |===========================                                                    |  34%
+| Type y[y > 0] to see that we get all of the positive elements of y, which are also the
+| positive elements of our original vector x.
+
+> y[y > 0]
+[1] 0.41833073 1.68055973 1.63367800 1.77941772 0.86623628 0.73149105 0.79056976
+[8] 0.07703075 2.56825544
+
+| Great job!
+
+
+  |                                                                                     
+  |=============================                                                  |  37%
+| You might wonder why we didn't just start with x[x > 0] to isolate the positive
+| elements of x. Try that now to see why.
+
+> x[x > 0]
+ [1]         NA         NA         NA         NA         NA         NA 0.41833073
+ [8] 1.68055973         NA         NA 1.63367800         NA         NA         NA
+[15]         NA         NA 1.77941772         NA         NA 0.86623628 0.73149105
+[22]         NA 0.79056976         NA         NA 0.07703075         NA 2.56825544
+[29]         NA
+
+| That's correct!
+
+
+  |                                                                                     
+  |===============================                                                |  39%
+| Since NA is not a value, but rather a placeholder for an unknown quantity, the
+| expression NA > 0 evaluates to NA. Hence we get a bunch of NAs mixed in with our
+| positive numbers when we do this.
+
+...
+
+
+  |                                                                                     
+  |=================================                                              |  42%
+| Combining our knowledge of logical operators with our new knowledge of subsetting, we
+| could do this -- x[!is.na(x) & x > 0]. Try it out.
+
+> x[!is.na(x) & x > 0]
+[1] 0.41833073 1.68055973 1.63367800 1.77941772 0.86623628 0.73149105 0.79056976
+[8] 0.07703075 2.56825544
+
+| You got it right!
+
+
+  |                                                                                     
+  |===================================                                            |  45%
+| In this case, we request only values of x that are both non-missing AND greater than
+| zero.
+
+...
+
+
+  |                                                                                     
+  |=====================================                                          |  47%
+| I've already shown you how to subset just the first ten values of x using x[1:10]. In
+| this case, we're providing a vector of positive integers inside of the square
+| brackets, which tells R to return only the elements of x numbered 1 through 10.
+
+...
+
+
+  |                                                                                     
+  |========================================                                       |  50%
+| Many programming languages use what's called 'zero-based indexing', which means that
+| the first element of a vector is considered element 0. R uses 'one-based indexing',
+| which (you guessed it!) means the first element of a vector is considered element 1.
+
+...
+
+
+  |                                                                                     
+  |==========================================                                     |  53%
+| Can you figure out how we'd subset the 3rd, 5th, and 7th elements of x? Hint -- Use
+| the c() function to specify the element numbers as a numeric vector.
+
+> x[c(3, 5, 7)]
+[1]         NA -0.4596127 -0.9594655
+
+| Your dedication is inspiring!
+
+
+  |                                                                                     
+  |============================================                                   |  55%
+| It's important that when using integer vectors to subset our vector x, we stick with
+| the set of indexes {1, 2, ..., 40} since x only has 40 elements. What happens if we
+| ask for the zeroth element of x (i.e. x[0])? Give it a try.
+
+> x[0]
+numeric(0)
+
+| That's the answer I was looking for.
+
+
+  |                                                                                     
+  |==============================================                                 |  58%
+| As you might expect, we get nothing useful. Unfortunately, R doesn't prevent us from
+| doing this. What if we ask for the 3000th element of x? Try it out.
+
+> x[3000]
+[1] NA
+
+| All that practice is paying off!
+
+
+  |                                                                                     
+  |================================================                               |  61%
+| Again, nothing useful, but R doesn't prevent us from asking for it. This should be a
+| cautionary tale. You should always make sure that what you are asking for is within
+| the bounds of the vector you're working with.
+
+...
+
+
+  |                                                                                     
+  |==================================================                             |  63%
+| What if we're interested in all elements of x EXCEPT the 2nd and 10th? It would be
+| pretty tedious to construct a vector containing all numbers 1 through 40 EXCEPT 2 and
+| 10.
+
+...
+
+
+  |                                                                                     
+  |====================================================                           |  66%
+| Luckily, R accepts negative integer indexes. Whereas x[c(2, 10)] gives us ONLY the 2nd
+| and 10th elements of x, x[c(-2, -10)] gives us all elements of x EXCEPT for the 2nd
+| and 10 elements.  Try x[c(-2, -10)] now to see this.
+
+> x[c(-2, -10)]
+ [1] -0.066588660           NA           NA -0.459612719           NA -0.959465546
+ [7] -0.422826329           NA  0.418330725 -0.370869957 -0.057653389  1.680559734
+[13]           NA           NA  1.633678001           NA           NA           NA
+[19] -0.007091671           NA -0.661434927           NA  1.779417722 -0.635025720
+[25] -0.451328531 -1.685815353           NA           NA  0.866236282  0.731491048
+[31]           NA  0.790569758           NA           NA  0.077030749           NA
+[37]  2.568255443           NA
+
+| You nailed it! Good job!
+
+
+  |                                                                                     
+  |======================================================                         |  68%
+| A shorthand way of specifying multiple negative numbers is to put the negative sign
+| out in front of the vector of positive numbers. Type x[-c(2, 10)] to get the exact
+| same result.
+
+> x[-c(2, 10)]
+ [1] -0.066588660           NA           NA -0.459612719           NA -0.959465546
+ [7] -0.422826329           NA  0.418330725 -0.370869957 -0.057653389  1.680559734
+[13]           NA           NA  1.633678001           NA           NA           NA
+[19] -0.007091671           NA -0.661434927           NA  1.779417722 -0.635025720
+[25] -0.451328531 -1.685815353           NA           NA  0.866236282  0.731491048
+[31]           NA  0.790569758           NA           NA  0.077030749           NA
+[37]  2.568255443           NA
+
+| You got it!
+
+
+  |                                                                                     
+  |========================================================                       |  71%
+| So far, we've covered three types of index vectors -- logical, positive integer, and
+| negative integer. The only remaining type requires us to introduce the concept of
+| 'named' elements.
+
+...
+
+
+  |                                                                                     
+  |==========================================================                     |  74%
+| Create a numeric vector with three named elements using vect <- c(foo = 11, bar = 2,
+| norf = NA).
+
+> vect <- c(foo = 11, bar =2, norf = NA)
+
+| You got it!
+
+
+  |                                                                                     
+  |============================================================                   |  76%
+| When we print vect to the console, you'll see that each element has a name. Try it
+| out.
+
+> vect
+ foo  bar norf 
+  11    2   NA 
+
+| Perseverance, that's the answer.
+
+
+  |                                                                                     
+  |==============================================================                 |  79%
+| We can also get the names of vect by passing vect as an argument to the names()
+| function. Give that a try.
+
+> names(vect)
+[1] "foo"  "bar"  "norf"
+
+| Keep working like that and you'll get there!
+
+
+  |                                                                                     
+  |================================================================               |  82%
+| Alternatively, we can create an unnamed vector vect2 with c(11, 2, NA). Do that now.
+
+> vect2 <- c(11, 2, NA)
+
+| Great job!
+
+
+  |                                                                                     
+  |===================================================================            |  84%
+| Then, we can add the `names` attribute to vect2 after the fact with names(vect2) <-
+| c("foo", "bar", "norf"). Go ahead.
+
+> names(vect2) <- c("foo", "bar", "norf")
+
+| Excellent work!
+
+
+  |                                                                                     
+  |=====================================================================          |  87%
+| Now, let's check that vect and vect2 are the same by passing them as arguments to the
+| identical() function.
+
+> identical(vect, vect2)
+[1] TRUE
+
+| All that practice is paying off!
+
+
+  |                                                                                     
+  |=======================================================================        |  89%
+| Indeed, vect and vect2 are identical named vectors.
+
+...
+
+
+  |                                                                                     
+  |=========================================================================      |  92%
+| Now, back to the matter of subsetting a vector by named elements. Which of the
+| following commands do you think would give us the second element of vect?
+
+1: vect[bar]
+2: vect["2"]
+3: vect["bar"]
+
+Selection: 3
+
+| Keep up the great work!
+
+
+  |                                                                                     
+  |===========================================================================    |  95%
+| Now, try it out.
+
+> vect["bar"]
+bar 
+  2 
+
+| You are really on a roll!
+
+
+  |                                                                                     
+  |=============================================================================  |  97%
+| Likewise, we can specify a vector of names with vect[c("foo", "bar")]. Try it out.
+
+> vect[c("foo", "bar")]
+foo bar 
+ 11   2 
+
+| Nice work!
+
+
+  |                                                                                     
+  |===============================================================================| 100%
+| Now you know all four methods of subsetting data from vectors. Different approaches
+| are best in different scenarios and when in doubt, try it out!
+
+...
+
+| Are you currently enrolled in the Coursera course associated with this lesson?
+
+1: Yes
+2: No
+
+Selection: 1
+
+| Would you like me to notify Coursera that you've completed this lesson? If so, I'll
+| need to get some more info from you.
+
+1: Yes
+2: No
+3: Maybe later
+
+Selection: 1
+
+| Is the following information correct?
+
+Course ID: rprog-032
+Submission login (email): anuar.iman@gmail.com
+Submission password: KzWqk2FpuR
+
+1: Yes, go ahead!
+2: No, I need to change something.
+
+Selection: 1
+
+| I'll try to tell Coursera you've completed this lesson now.
+
+| Great work!
+
+| I've notified Coursera that you have completed rprog-032, Subsetting_Vectors.
+
+| You've reached the end of this lesson! Returning to the main menu...
+
+| Please choose a course, or type 0 to exit swirl.
+
+1: R Programming
+2: Take me to the swirl course repository!

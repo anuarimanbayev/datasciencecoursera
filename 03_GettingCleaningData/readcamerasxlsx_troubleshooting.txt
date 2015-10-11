@@ -1,0 +1,63 @@
+> install.packages('xlsx',repos='http://cran.r-project.org')
+also installing the dependencies ‘rJava’, ‘xlsxjars’
+
+trying URL 'http://cran.r-project.org/bin/windows/contrib/3.2/rJava_0.9-7.zip'
+Content type 'application/zip' length 766842 bytes (748 KB)
+downloaded 748 KB
+
+trying URL 'http://cran.r-project.org/bin/windows/contrib/3.2/xlsxjars_0.6.1.zip'
+Content type 'application/zip' length 9485167 bytes (9.0 MB)
+downloaded 9.0 MB
+
+trying URL 'http://cran.r-project.org/bin/windows/contrib/3.2/xlsx_0.5.7.zip'
+Content type 'application/zip' length 401142 bytes (391 KB)
+downloaded 391 KB
+
+package ‘rJava’ successfully unpacked and MD5 sums checked
+package ‘xlsxjars’ successfully unpacked and MD5 sums checked
+package ‘xlsx’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\Anuar Imanbayev\AppData\Local\Temp\Rtmp8MkO8I\downloaded_packages
+	
+
+SECOND ATTEMPT after JAVA_HOME system environment setting
+> install.packages("xlsx", repos = "http://cran.r-project.org")
+trying URL 'http://cran.r-project.org/bin/windows/contrib/3.2/xlsx_0.5.7.zip'
+Content type 'application/zip' length 401142 bytes (391 KB)
+downloaded 391 KB
+
+package ‘xlsx’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\Anuar Imanbayev\AppData\Local\Temp\Rtmpu0TbBF\downloaded_packages
+	
+## Installing rJava SEPARATELY
+> install.packages("rJava")
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/rJava_0.9-7.zip'
+Content type 'application/zip' length 766842 bytes (748 KB)
+downloaded 748 KB
+
+package ‘rJava’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\Anuar Imanbayev\AppData\Local\Temp\Rtmp670TbJ\downloaded_packages
+> library(rJava)
+## Testing that it works and throws no errors
+
+## The above worked only after setting the Windows 10 System Environment Variable JAVA_HOME to the 64-bit address which was missing before
+Step 1: Install the latest JRE for the 64 bit version of Windows OS if that's what you have
+Step 2: set variable "JAVA_HOME"" to C:\Program Files\Java\jre1.8.0_60
+	
+## Installing xlsxjars SEPARATELY
+> install.packages("xlsxjars")
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/xlsxjars_0.6.1.zip'
+Content type 'application/zip' length 9485167 bytes (9.0 MB)
+downloaded 9.0 MB
+
+package ‘xlsxjars’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\Anuar Imanbayev\AppData\Local\Temp\Rtmpi0Nx5N\downloaded_packages
+> library(xlsxjars)
+## Testing that it works and throws no errors

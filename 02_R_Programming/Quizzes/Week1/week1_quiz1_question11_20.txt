@@ -1,0 +1,64 @@
+> getwd()
+[1] "C:/Users/Anuar Imanbayev/Desktop/DataScienceCourse/R_Programming"
+> dir()
+[1] "16GBRAM_calculation.txt" "hw1_data.csv"           
+[3] "LectureNotes"            "Lectures"               
+[5] "mycode.R"                "Quizzes"                
+> data1 <- read.csv("hw1_data.csv")
+> ## Question 7: Vectors can have attributes, such as names.
+> ## Question 10: This takes the elements of x that are greater than 10 and tests whether they are equal to 4 or not.
+> ## Quesition 11: In the dataset provided for this Quiz, what are the column names of the dataset?
+> ## You can get the column names of a data frame with the `names()' function.
+> colnames(data1)
+[1] "Ozone"   "Solar.R" "Wind"    "Temp"    "Month"   "Day" 
+> ## Question 12: Extract the first 2 rows of the data frame and print them to the console. What does the output look like?
+> ## You can extract the first two rows using the [ operator and an integer sequence to index the rows.
+> data1[1:2, ]
+  Ozone Solar.R Wind Temp Month Day
+1    41     190  7.4   67     5   1
+2    36     118  8.0   72     5   2
+> ## Questin 13: How many observations (i.e. rows) are in this data frame?
+> ## You can use the `nrows()' function to compute the number of rows in a data frame.
+> NROW(data1)
+[1] 153
+> ## Question 14: Extract the last 2 rows of the data frame and print them to the console. What does the output look like?
+> ## The `tail()' function is an easy way to extract the last few elements of an R object.
+> data1[152:153, ]
+    Ozone Solar.R Wind Temp Month Day
+152    18     131  8.0   76     9  29
+153    20     223 11.5   68     9  30
+> ## Question 15: What is the value of Ozone in the 47th row?
+> data1[47,1]
+[1] 21
+> ## Question 16: How many missing values are in the Ozone column of this data frame?
+> data1[is.na(data1),1]
+ [1] NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA
+[26] NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA
+> sum(is.na(data1[,1]))
+[1] 37
+> ## Question 17: What is the mean of the Ozone column in this dataset? Exclude missing values (coded as NA) from this calculation.
+> colMeans(data1, na.rm=TRUE, dims=1)
+     Ozone    Solar.R       Wind       Temp      Month        Day 
+ 42.129310 185.931507   9.957516  77.882353   6.993464  15.803922 
+> ## Quesiton 18: Extract the subset of rows of the data frame where Ozone values are above 31 and Temp values are above 90. What is the mean of Solar.R in this subset?
+> data3 <- data2[ which(data2$Ozone > 31 & data2$Temp > 90), ]
+> data3
+    Ozone Solar.R Wind Temp Month Day
+69     97     267  6.3   92     7   8
+70     97     272  5.7   92     7   9
+120    76     203  9.7   97     8  28
+121   118     225  2.3   94     8  29
+122    84     237  6.3   96     8  30
+123    85     188  6.3   94     8  31
+124    96     167  6.9   91     9   1
+125    78     197  5.1   92     9   2
+126    73     183  2.8   93     9   3
+127    91     189  4.6   93     9   4
+> colMeans(data3, na.rm=TRUE, dims=1)
+  Ozone Solar.R    Wind    Temp   Month     Day 
+   89.5   212.8     5.6    93.4     8.2    14.5 
+> ## Quesiton 19: What is the mean of "Temp" when "Month" is equal to 6?
+> colMeans(data1[ which(data1$Month == 6),], na.rm=TRUE, dims=1)
+    Ozone   Solar.R      Wind      Temp     Month       Day 
+ 29.44444 190.16667  10.26667  79.10000   6.00000  15.50000
+> ## Quesiton 20: What was the maximum ozone value in the month of May (i.e. Month = 5)?

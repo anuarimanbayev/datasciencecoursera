@@ -1,0 +1,11 @@
+> install.packages("XML")
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/XML_3.98-1.3.zip'
+Content type 'application/zip' length 4296516 bytes (4.1 MB)
+downloaded 4.1 MB
+
+package ‘XML’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\Anuar Imanbayev\AppData\Local\Temp\Rtmpi2XEND\downloaded_packages
+> library(XML)
+## To make sure that the XML package is loaded without errors

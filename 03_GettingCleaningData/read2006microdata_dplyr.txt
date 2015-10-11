@@ -1,0 +1,41 @@
+> install.packages("dplyr")
+also installing the dependencies ‘assertthat’, ‘lazyeval’, ‘DBI’
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/assertthat_0.1.zip'
+Content type 'application/zip' length 44906 bytes (43 KB)
+downloaded 43 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/lazyeval_0.1.10.zip'
+Content type 'application/zip' length 63089 bytes (61 KB)
+downloaded 61 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/DBI_0.3.1.zip'
+Content type 'application/zip' length 162396 bytes (158 KB)
+downloaded 158 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/dplyr_0.4.3.zip'
+Content type 'application/zip' length 2552802 bytes (2.4 MB)
+downloaded 2.4 MB
+
+package ‘assertthat’ successfully unpacked and MD5 sums checked
+package ‘lazyeval’ successfully unpacked and MD5 sums checked
+package ‘DBI’ successfully unpacked and MD5 sums checked
+package ‘dplyr’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\Anuar Imanbayev\AppData\Local\Temp\RtmpiCYPLo\downloaded_packages
+> library(dplyr)
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:data.table’:
+
+    between, last
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union

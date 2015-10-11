@@ -1,0 +1,17 @@
+16 GB RAM memory
+
+MAX DATASET LOAD
+
+16 GB 	= 16,000 MB
+Divide by half for R/STATA/Hadoop overhead
+		= 8,000 MB
+		= 8,000 MB * 2^20
+		= 8,388,608,000 Bytes
+		= 8,388,608,000 Bytes / 8 Bytes/Numeric
+		= 1,048,576,000 Numeric Values in a DATASET
+		= 1,048,576,000 / 200 Variables/Classes/Columns
+		= 5,242,880 Rows/Entries/Subjects
+		
+This UCI dataset has 2,075,259 rows and 9 columns.
+My computer with 16 GB RAM memory can handle 5,242,880 rows and 200 columns.
+Thus, while I'm more than fine to reading the entire dataset, I'll try subsetting just the dates required, as per good practice.

@@ -1,0 +1,76 @@
+# TEST 1: DT[,mean(pwgtp15),by=SEX]
+t <- system.time(y <- DT[,mean(pwgtp15),by=SEX])
+> source("readhousingidaho.R")
+> readhousingidaho()
+trying URL 'https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06pid.csv'
+Content type 'text/csv' length 11462469 bytes (10.9 MB)
+downloaded 10.9 MB
+
+Elapsed time: 0.0200000000
+   SEX       V1
+1:   1 99.80667
+2:   2 96.66534
+
+
+# TEST 2: mean(DT[DT$SEX==1,]$pwgtp15); mean(DT[DT$SEX==2,]$pwgtp15)
+t <- system.time(y <- mean(DT[DT$SEX == 1, ]$pwgtp15)) + system.time(mean(DT[DT$SEX == 2, ]$pwgtp15))
+> source("readhousingidaho.R")
+> readhousingidaho()
+trying URL 'https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06pid.csv'
+Content type 'text/csv' length 11462469 bytes (10.9 MB)
+downloaded 10.9 MB
+
+Elapsed time: 0.0200000000
+[1] 99.80667
+
+
+# TEST 3: mean(DT$pwgtp15,by=DT$SEX)
+t <- system.time(y <- mean(DT$pwgtp15, by = DT$SEX))
+> source("readhousingidaho.R")
+> readhousingidaho()
+trying URL 'https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06pid.csv'
+Content type 'text/csv' length 11462469 bytes (10.9 MB)
+downloaded 10.9 MB
+
+Elapsed time: 0.0000000000
+[1] 98.21613
+
+
+# TEST 4: sapply(split(DT$pwgtp15,DT$SEX),mean)
+t <- system.time(y <- sapply(split(DT$pwgtp15, DT$SEX), mean))
+> source("readhousingidaho.R")
+> readhousingidaho()
+trying URL 'https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06pid.csv'
+Content type 'text/csv' length 11462469 bytes (10.9 MB)
+downloaded 10.9 MB
+
+Elapsed time: 0.0000000000
+       1        2 
+99.80667 96.66534
+
+
+# TEST 5: tapply(DT$pwgtp15,DT$SEX,mean)
+t <- system.time(y <- tapply(DT$pwgtp15, DT$SEX, mean))
+> source("readhousingidaho.R")
+> readhousingidaho()
+trying URL 'https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06pid.csv'
+Content type 'text/csv' length 11462469 bytes (10.9 MB)
+downloaded 10.9 MB
+
+Elapsed time: 0.0000000000
+       1        2 
+99.80667 96.66534
+
+
+# TEST 6: rowMeans(DT)[DT$SEX==1]; rowMeans(DT)[DT$SEX==2]
+t <- system.time(y <- rowMeans(DT)[DT$SEX == 1]) + system.time(rowMeans(DT)[DT$SEX == 2])
+> source("readhousingidaho.R")
+> readhousingidaho()
+trying URL 'https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06pid.csv'
+Content type 'text/csv' length 11462469 bytes (10.9 MB)
+downloaded 10.9 MB
+
+ Show Traceback
+ 
+ Rerun with Debug
+ Error in rowMeans(DT) : 'x' must be numeric Timing stopped at: 1.23 0.02 1.25

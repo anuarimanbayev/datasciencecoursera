@@ -1,0 +1,17 @@
+> install.packages("RCurl")
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/RCurl_1.95-4.7.zip'
+Content type 'application/zip' length 2860934 bytes (2.7 MB)
+downloaded 2.7 MB
+
+package ‘RCurl’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\Anuar Imanbayev\AppData\Local\Temp\RtmpGGGAdH\downloaded_packages
+> library(RCurl)
+Loading required package: bitops
+
+Attaching package: ‘RCurl’
+
+The following object is masked _by_ ‘.GlobalEnv’:
+
+    complete

@@ -1,0 +1,15 @@
+To run getcamerasdataset file:
+
+In R Studio:
+
+Step 1: source("getcamerasdataset.R")
+Step 2: getcamerasdataset()
+
+EXAMPLE OUTCOME:
+> source("getcamerasdataset.R")
+> getcamerasdataset()
+trying URL 'https://data.baltimorecity.gov/api/views/dz54-2aru/rows.csv?accessType=DOWNLOAD'
+Content type 'text/csv; charset=utf-8' length 9294 bytes
+downloaded 9294 bytes
+
+[1] "Fri Oct 09 14:56:47 2015"

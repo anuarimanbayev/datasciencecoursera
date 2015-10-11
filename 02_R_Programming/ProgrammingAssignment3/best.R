@@ -1,0 +1,58 @@
+best <- function(state, outcome) {
+        ## Suppress warnings
+        options(warn=-1)
+        
+        ## Read outcome data
+        data <- read.csv("outcome-of-care-measures.csv", colClasses = "character")
+        states <- data[,7]
+        
+        ## Check that state and outcome are valid
+        # Testing that state input of 2-character long vector is valid or not
+        if (is.element(state, states)) {                # if the element state is found within the states character vector column of 7 within the data
+                validstate <- state                     # return validstate
+        } else if (nchar(state) < 2) {                  # if the character vector is less than 2 characters long, like "TX"
+                stop("invalid state")                   # using stop function to throw an error message
+        } else if (nchar(state) > 2) {                  # if the character vector is more than 2 characters long, like "TEXAS"
+                stop("invalid state")                   # using stop function to throw an error message
+        } else {                                        # if its 2-character vector not found in the 7th column of the data, states, such as "BB". There is no such state as with initials "BB"
+                stop("invalid state")                   # using stop function to throw an error message
+        }
+        
+        # Testing that outcome is exactly inputted, only accpeting lower-case inputs of 'heart attack', 'heart failure', and 'pneumonia'
+        if (outcome == "heart attack") {
+                validoutcome <- outcome                 # return validoutcome
+        } else if (outcome == "heart failure") {
+                validoutcome <- outcome                 # return validoutcome
+        } else if (outcome == "pneumonia") {
+                validoutcome <- outcome                 # return validoutcome
+        } else {
+                stop("invalid outcome")                 # otherwise for anything else, upper-case 'HEART attack' or incorrect spellings 'hert attack' or anything else, throw an error message
+        }
+        
+        
+        ## Return hospital name in that state with lowest 30-day death
+        ## rate
+        state_data <- data[data$State == validstate,]
+        
+        if (validoutcome=="heart attack") {
+                variables_data <- state_data[,c(2,7,11)]
+                order_data <- order(as.numeric(state_data[, 11]), state_data[, 2], na.last = NA)
+        } else if (validoutcome=="heart failure") {
+                variables_data <- state_data[,c(2,7,17)]
+                order_data <- order(as.numeric(state_data[, 17]), state_data[, 2], na.last = NA)
+        } else if (validoutcome=="pneumonia") {
+                variables_data <- state_data[,c(2,7,23)]
+                order_data <- order(as.numeric(state_data[, 23]), state_data[, 2], na.last = NA)
+        }
+        
+        result_data <- variables_data[order_data, ]
+        
+        result <- result_data[1,1]
+        
+        result
+        ## hospital name is column 2
+        ## state is column 7
+        ## heart attack mortality is column 11
+        ## heart failure mortality is column 17
+        ## pneumonia mortality is column 23
+}

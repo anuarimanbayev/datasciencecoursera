@@ -1,0 +1,14 @@
+To run readexamplehtmlfunction file:
+
+In R Studio:
+
+Step 1: source("readexamplehtml.R")
+Step 2: readexamplehtml()
+
+EXAMPLE OUTCOME:
+> source("readexamplehtml.R")
+> readexamplehtml()
+[1] "Baltimore RavensRavens" "Baltimore RavensRavens"
+> source("readexamplehtml.R")
+> readexamplehtml()
+[1] "1-3" "1-3"
