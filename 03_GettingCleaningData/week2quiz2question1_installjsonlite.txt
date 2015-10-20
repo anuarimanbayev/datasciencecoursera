@@ -1,0 +1,11 @@
+> install.packages("jsonlite")
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/jsonlite_0.9.17.zip'
+Content type 'application/zip' length 1009830 bytes (986 KB)
+downloaded 986 KB
+
+package ‘jsonlite’ successfully unpacked and MD5 sums checked
+Warning in install.packages :
+  cannot remove prior installation of package ‘jsonlite’
+
+The downloaded binary packages are in
+	C:\Users\Anuar Imanbayev\AppData\Local\Temp\RtmpGmW2Mi\downloaded_packages
