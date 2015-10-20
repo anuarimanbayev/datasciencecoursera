@@ -1,0 +1,95 @@
+> source("http://bioconductor.org/biocLite.R")
+trying URL 'https://bioconductor.org/packages/3.2/bioc/bin/windows/contrib/3.2/BiocInstaller_1.20.0.zip'
+Content type 'application/zip' length 116517 bytes (113 KB)
+downloaded 113 KB
+
+package ‘BiocInstaller’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\Anuar Imanbayev\AppData\Local\Temp\RtmpagM5ni\downloaded_packages
+Bioconductor version 3.2 (BiocInstaller 1.20.0), ?biocLite
+  for help
+> biocLite("rhdf5")
+BioC_mirror: https://bioconductor.org
+Using Bioconductor 3.2 (BiocInstaller 1.20.0), R 3.2.2
+  (2015-08-14).
+Installing package(s) ‘rhdf5’
+also installing the dependency ‘zlibbioc’
+
+trying URL 'https://bioconductor.org/packages/3.2/bioc/bin/windows/contrib/3.2/zlibbioc_1.16.0.zip'
+Content type 'application/zip' length 693613 bytes (677 KB)
+downloaded 677 KB
+
+trying URL 'https://bioconductor.org/packages/3.2/bioc/bin/windows/contrib/3.2/rhdf5_2.14.0.zip'
+Content type 'application/zip' length 5544027 bytes (5.3 MB)
+downloaded 5.3 MB
+
+package ‘zlibbioc’ successfully unpacked and MD5 sums checked
+package ‘rhdf5’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\Anuar Imanbayev\AppData\Local\Temp\RtmpagM5ni\downloaded_packages
+Old packages: 'class', 'devtools', 'evaluate', 'foreign',
+  'MASS', 'nlme', 'nnet', 'Rcpp', 'spatial', 'testthat'
+Update all/some/none? [a/s/n]: 
+a
+also installing the dependency ‘praise’
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/praise_1.0.0.zip'
+Content type 'application/zip' length 17672 bytes (17 KB)
+downloaded 17 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/class_7.3-14.zip'
+Content type 'application/zip' length 100024 bytes (97 KB)
+downloaded 97 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/devtools_1.9.1.zip'
+Content type 'application/zip' length 359146 bytes (350 KB)
+downloaded 350 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/evaluate_0.8.zip'
+Content type 'application/zip' length 40574 bytes (39 KB)
+downloaded 39 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/foreign_0.8-66.zip'
+Content type 'application/zip' length 288676 bytes (281 KB)
+downloaded 281 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/MASS_7.3-44.zip'
+Content type 'application/zip' length 1087240 bytes (1.0 MB)
+downloaded 1.0 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/nlme_3.1-122.zip'
+Content type 'application/zip' length 2140722 bytes (2.0 MB)
+downloaded 2.0 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/nnet_7.3-11.zip'
+Content type 'application/zip' length 121037 bytes (118 KB)
+downloaded 118 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/Rcpp_0.12.1.zip'
+Content type 'application/zip' length 3189395 bytes (3.0 MB)
+downloaded 3.0 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/spatial_7.3-11.zip'
+Content type 'application/zip' length 151974 bytes (148 KB)
+downloaded 148 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/testthat_0.11.0.zip'
+Content type 'application/zip' length 263759 bytes (257 KB)
+downloaded 257 KB
+
+package ‘praise’ successfully unpacked and MD5 sums checked
+package ‘class’ successfully unpacked and MD5 sums checked
+package ‘devtools’ successfully unpacked and MD5 sums checked
+package ‘evaluate’ successfully unpacked and MD5 sums checked
+package ‘foreign’ successfully unpacked and MD5 sums checked
+package ‘MASS’ successfully unpacked and MD5 sums checked
+package ‘nlme’ successfully unpacked and MD5 sums checked
+package ‘nnet’ successfully unpacked and MD5 sums checked
+package ‘Rcpp’ successfully unpacked and MD5 sums checked
+package ‘spatial’ successfully unpacked and MD5 sums checked
+package ‘testthat’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\Anuar Imanbayev\AppData\Local\Temp\RtmpagM5ni\downloaded_packages
