@@ -1,0 +1,9 @@
+> install.packages("httpuv")
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/httpuv_1.3.3.zip'
+Content type 'application/zip' length 871764 bytes (851 KB)
+downloaded 851 KB
+
+package ‘httpuv’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\Anuar Imanbayev\AppData\Local\Temp\RtmpU7RXck\downloaded_packages
