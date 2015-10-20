@@ -1,0 +1,57 @@
+> install.packages("ggplot2")
+also installing the dependencies ‘colorspace’, ‘RColorBrewer’, ‘dichromat’, ‘munsell’, ‘labeling’, ‘plyr’, ‘gtable’, ‘reshape2’, ‘scales’
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/colorspace_1.2-6.zip'
+Content type 'application/zip' length 392324 bytes (383 KB)
+downloaded 383 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/RColorBrewer_1.1-2.zip'
+Content type 'application/zip' length 26681 bytes (26 KB)
+downloaded 26 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/dichromat_2.0-0.zip'
+Content type 'application/zip' length 147785 bytes (144 KB)
+downloaded 144 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/munsell_0.4.2.zip'
+Content type 'application/zip' length 126314 bytes (123 KB)
+downloaded 123 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/labeling_0.3.zip'
+Content type 'application/zip' length 40880 bytes (39 KB)
+downloaded 39 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/plyr_1.8.3.zip'
+Content type 'application/zip' length 1113758 bytes (1.1 MB)
+downloaded 1.1 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/gtable_0.1.2.zip'
+Content type 'application/zip' length 64117 bytes (62 KB)
+downloaded 62 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/reshape2_1.4.1.zip'
+Content type 'application/zip' length 503495 bytes (491 KB)
+downloaded 491 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/scales_0.3.0.zip'
+Content type 'application/zip' length 604446 bytes (590 KB)
+downloaded 590 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/ggplot2_1.0.1.zip'
+Content type 'application/zip' length 2677520 bytes (2.6 MB)
+downloaded 2.6 MB
+
+package ‘colorspace’ successfully unpacked and MD5 sums checked
+package ‘RColorBrewer’ successfully unpacked and MD5 sums checked
+package ‘dichromat’ successfully unpacked and MD5 sums checked
+package ‘munsell’ successfully unpacked and MD5 sums checked
+package ‘labeling’ successfully unpacked and MD5 sums checked
+package ‘plyr’ successfully unpacked and MD5 sums checked
+package ‘gtable’ successfully unpacked and MD5 sums checked
+package ‘reshape2’ successfully unpacked and MD5 sums checked
+package ‘scales’ successfully unpacked and MD5 sums checked
+package ‘ggplot2’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\Anuar Imanbayev\AppData\Local\Temp\RtmpKQX69d\downloaded_packages
+> library(ggplot2)
