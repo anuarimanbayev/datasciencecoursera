@@ -1,0 +1,31 @@
+> install.packages("sqldf")
+also installing the dependencies ‘gsubfn’, ‘proto’, ‘RSQLite’
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/gsubfn_0.6-6.zip'
+Content type 'application/zip' length 348552 bytes (340 KB)
+downloaded 340 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/proto_0.3-10.zip'
+Content type 'application/zip' length 458603 bytes (447 KB)
+downloaded 447 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/RSQLite_1.0.0.zip'
+Content type 'application/zip' length 1217754 bytes (1.2 MB)
+downloaded 1.2 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/sqldf_0.4-10.zip'
+Content type 'application/zip' length 71839 bytes (70 KB)
+downloaded 70 KB
+
+package ‘gsubfn’ successfully unpacked and MD5 sums checked
+package ‘proto’ successfully unpacked and MD5 sums checked
+package ‘RSQLite’ successfully unpacked and MD5 sums checked
+package ‘sqldf’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\Anuar Imanbayev\AppData\Local\Temp\RtmpcrKOUZ\downloaded_packages
+> library(sqldf)
+Loading required package: gsubfn
+Loading required package: proto
+Loading required package: RSQLite
+Loading required package: DBI
