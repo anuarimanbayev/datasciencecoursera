@@ -1,0 +1,9 @@
+> install.packages("plyr")
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/plyr_1.8.3.zip'
+Content type 'application/zip' length 1112903 bytes (1.1 MB)
+downloaded 1.1 MB
+
+package ‘plyr’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\Anuar Imanbayev\AppData\Local\Temp\RtmpAtsm1K\downloaded_packages
