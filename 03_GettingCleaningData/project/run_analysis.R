@@ -1,3 +1,7 @@
+# I have a working directory that is different from my datasciencecoursera directory
+# Thus, while I have features.txt and other processing texts in my working directory, 
+# I only push the requested tidy_data.txt to the datasciencecoursera folder "03_GettingCleaningData"
+
 log <- function(...) {
         cat("[run_analysis.R] ", ..., "\n", sep="")
 }
