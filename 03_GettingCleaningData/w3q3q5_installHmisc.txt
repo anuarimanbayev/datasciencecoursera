@@ -1,0 +1,31 @@
+> install.packages("Hmisc")
+also installing the dependencies ‘Formula’, ‘latticeExtra’, ‘acepack’, ‘gridExtra’
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/Formula_1.2-1.zip'
+Content type 'application/zip' length 163505 bytes (159 KB)
+downloaded 159 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/latticeExtra_0.6-26.zip'
+Content type 'application/zip' length 2063432 bytes (2.0 MB)
+downloaded 2.0 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/acepack_1.3-3.3.zip'
+Content type 'application/zip' length 69257 bytes (67 KB)
+downloaded 67 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/gridExtra_2.0.0.zip'
+Content type 'application/zip' length 266224 bytes (259 KB)
+downloaded 259 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/Hmisc_3.17-0.zip'
+Content type 'application/zip' length 1628020 bytes (1.6 MB)
+downloaded 1.6 MB
+
+package ‘Formula’ successfully unpacked and MD5 sums checked
+package ‘latticeExtra’ successfully unpacked and MD5 sums checked
+package ‘acepack’ successfully unpacked and MD5 sums checked
+package ‘gridExtra’ successfully unpacked and MD5 sums checked
+package ‘Hmisc’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\Anuar Imanbayev\AppData\Local\Temp\RtmpKyYvsB\downloaded_packages
