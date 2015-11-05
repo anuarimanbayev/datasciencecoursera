@@ -1,0 +1,26 @@
+> install.packages("quantmod")
+also installing the dependencies ‘xts’, ‘zoo’, ‘TTR’
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/xts_0.9-7.zip'
+Content type 'application/zip' length 662444 bytes (646 KB)
+downloaded 646 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/zoo_1.7-12.zip'
+Content type 'application/zip' length 897155 bytes (876 KB)
+downloaded 876 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/TTR_0.23-0.zip'
+Content type 'application/zip' length 280607 bytes (274 KB)
+downloaded 274 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/quantmod_0.4-5.zip'
+Content type 'application/zip' length 474426 bytes (463 KB)
+downloaded 463 KB
+
+package ‘xts’ successfully unpacked and MD5 sums checked
+package ‘zoo’ successfully unpacked and MD5 sums checked
+package ‘TTR’ successfully unpacked and MD5 sums checked
+package ‘quantmod’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\Anuar Imanbayev\AppData\Local\Temp\RtmpsjHgij\downloaded_packages
