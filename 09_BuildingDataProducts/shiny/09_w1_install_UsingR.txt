@@ -1,0 +1,42 @@
+> install.packages("UsingR")
+also installing the dependency ‘HistData’
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/HistData_0.7-6.zip'
+Content type 'application/zip' length 257270 bytes (251 KB)
+downloaded 251 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/UsingR_2.0-5.zip'
+Content type 'application/zip' length 2078069 bytes (2.0 MB)
+downloaded 2.0 MB
+
+package ‘HistData’ successfully unpacked and MD5 sums checked
+package ‘UsingR’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\Anuar Imanbayev\AppData\Local\Temp\Rtmp4EJsbc\downloaded_packages
+> library(UsingR)
+Loading required package: MASS
+Loading required package: HistData
+Loading required package: Hmisc
+Loading required package: grid
+Loading required package: lattice
+Loading required package: survival
+Loading required package: Formula
+Loading required package: ggplot2
+
+Attaching package: ‘Hmisc’
+
+The following objects are masked from ‘package:base’:
+
+    format.pval, round.POSIXt, trunc.POSIXt, units
+
+
+Attaching package: ‘UsingR’
+
+The following object is masked from ‘package:ggplot2’:
+
+    movies
+
+The following object is masked from ‘package:survival’:
+
+    cancer
