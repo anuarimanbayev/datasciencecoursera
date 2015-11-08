@@ -1,0 +1,22 @@
+> install.packages("shiny")
+also installing the dependencies ‘xtable’, ‘htmltools’
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/xtable_1.8-0.zip'
+Content type 'application/zip' length 326835 bytes (319 KB)
+downloaded 319 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/htmltools_0.2.6.zip'
+Content type 'application/zip' length 85863 bytes (83 KB)
+downloaded 83 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/shiny_0.12.2.zip'
+Content type 'application/zip' length 1867318 bytes (1.8 MB)
+downloaded 1.8 MB
+
+package ‘xtable’ successfully unpacked and MD5 sums checked
+package ‘htmltools’ successfully unpacked and MD5 sums checked
+package ‘shiny’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\Anuar Imanbayev\AppData\Local\Temp\Rtmp4EJsbc\downloaded_packages
+> library(shiny)

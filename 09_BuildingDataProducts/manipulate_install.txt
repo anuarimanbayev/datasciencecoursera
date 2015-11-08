@@ -1,0 +1,10 @@
+> install.packages("manipulate")
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/manipulate_1.0.1.zip'
+Content type 'application/zip' length 35812 bytes (34 KB)
+downloaded 34 KB
+
+package ‘manipulate’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\Anuar Imanbayev\AppData\Local\Temp\RtmpotLica\downloaded_packages
+> library(manipulate)
