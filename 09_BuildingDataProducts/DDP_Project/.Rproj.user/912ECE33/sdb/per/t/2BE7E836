@@ -1,0 +1,17 @@
+{
+    "contents" : "# Load shiny package\nlibrary(shiny)\n\n# Load analysis file\nsource(\"analysis.R\")\n\n# Shiny server\nshinyServer(\n        function(input, output) {\n                # Initialize reactive values\n                values <- reactiveValues()\n                values$leagues <- leagues\n\n                # Create event type checkbox\n                output$leaguesControl <- renderUI({\n                        checkboxGroupInput('leagues', 'SCII Leagues:',\n                                           leagues, selected = values$leagues)\n                })\n\n                # Add observer on select-all button\n                observe({\n                        if(input$selectAll == 0) return()\n                        values$leagues <- leagues\n                })\n\n                # Add observer on clear-all button\n                observe({\n                        if(input$clearAll == 0) return()\n                        values$leagues <- c() # empty list\n                })\n\n\n                # Prepare dataset\n                dataTable <- reactive({\n                        groupByLeague(mydata, input$playerage[1],\n                                     input$playerage[2], input$playerapm[1],\n                                     input$playerapm[2], input$leagues)\n                })\n\n                dataTableByAgeAll <- reactive({\n                        groupByAgeAll(mydata, input$playerage[1],\n                                       input$playerage[2], input$playerapm[1],\n                                       input$playerapm[2], input$leagues)\n                })\n                \n                dataTableByAPMAgeAvg <- reactive({\n                        groupByAPMAgeAvg(mydata, input$playerage[1], \n                                        input$playerage[2], input$playerapm[1],\n                                        input$playerapm[2], input$leagues)\n                })\n\n                dataTableByAPMLeagueAvg <- reactive({\n                        groupByAPMLeagueAvg(mydata, input$playerage[1],\n                                             input$playerage[2], input$playerapm[1],\n                                             input$playerapm[2], input$leagues)\n                })\n\n                # Render data table\n                output$dTable <- renderDataTable({\n                        dataTable()\n                })\n                \n                output$apmByAgeAvg <- renderChart({\n                        plotAPMByAgeAvg(dataTableByAPMAgeAvg())\n                })\n\n                output$apmByLeagueAvg <- renderChart({\n                        plotAPMByLeagueAvg(dataTableByAPMLeagueAvg())\n                })\n\n        } # end of function(input, output)\n)\n",
+    "created" : 1451102986733.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1318912781",
+    "id" : "2BE7E836",
+    "lastKnownWriteTime" : 1451113996,
+    "path" : "C:/Users/Anuar Imanbayev/Desktop/DataScienceCourse/DSC_Working_Directory/DDP_Project/server.R",
+    "project_path" : "server.R",
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

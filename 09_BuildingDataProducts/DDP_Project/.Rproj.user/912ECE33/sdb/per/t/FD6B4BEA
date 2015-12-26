@@ -1,0 +1,17 @@
+{
+    "contents" : "# The user-interface setup for the Shiny web app\nlibrary(shiny)\nlibrary(BH)\nlibrary(rCharts)\nrequire(markdown)\nrequire(data.table)\nlibrary(dplyr)\nlibrary(DT)\n\nshinyUI(\n        navbarPage(\"SkillCraft1 Visualizer of Starcraft II Replays\",\n                   # multi-page user-interface that includes a navigation bar.\n                   tabPanel(\"Explore the Data\",\n                            sidebarPanel(\n                                    sliderInput(\"playerapm\",\n                                                \"APM (Actions per Minute):\",\n                                                min = 22.1,\n                                                max = 389.8314,\n                                                value = c(22.1, 389.8314)\n                                    ),\n                                    sliderInput(\"playerage\",\n                                                \"Player Age:\",\n                                                min = 16,\n                                                max = 44,\n                                                value = c(16, 44)),\n\n                                    uiOutput(\"leaguesControl\"), # the id\n\n                                    actionButton(inputId = \"clearAll\",\n                                                 label = \"Clear selection\",\n                                                 icon = icon(\"square-o\")),\n                                    actionButton(inputId = \"selectAll\",\n                                                 label = \"Select all\",\n                                                 icon = icon(\"check-square-o\"))\n\n                            ),\n                            mainPanel(\n                                    tabsetPanel(\n                                            # 'Dataset' tab panel\n                                            tabPanel(p(icon(\"table\"), \"Dataset\"),\n                                                     dataTableOutput(outputId=\"dTable\")\n                                            ),\n                                            # 'Visualize the Data' tab panel\n                                            tabPanel(p(icon(\"line-chart\"), \"Visualize the Data\"),\n                                                     h4('Average APM by Age', align = \"center\"),\n                                                     showOutput(\"apmByAgeAvg\", \"nvd3\"),\n                                                     h4('Average APM by League', align = \"center\"),\n                                                     showOutput(\"apmByLeagueAvg\", \"nvd3\")\n                                            )\n\n                                    )\n\n                            )\n                   ), # end of \"Explore Dataset\" tab panel\n\n                   tabPanel(\"About\",\n                        mainPanel(\n                        includeMarkdown(\"about.md\")\n                        )\n                   ) # end of \"About\" tab panel\n        )\n\n)\n",
+    "created" : 1451102987455.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1098796668",
+    "id" : "FD6B4BEA",
+    "lastKnownWriteTime" : 1451114123,
+    "path" : "C:/Users/Anuar Imanbayev/Desktop/DataScienceCourse/DSC_Working_Directory/DDP_Project/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
