@@ -1,0 +1,87 @@
+---
+title       : SkillCraft1 Visualizer of StarCraft II Replays
+subtitle    : https://anuarimanbayev.shinyapps.io/DDP_Project
+author      : Anuar Imanbayev
+job         : Data Science Specialization Course Student
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+logo        : starcraft2_logo.png
+--- bg:url(assets/img/sc2_1.png);background-size:cover
+
+## Problem
+
+I want to predict StarCraft II performance within increasingly competitive leagues based on player's attributes of biological Age and attained APM or Actions per Minute.
+
+Towards this goal, I wanted reactive elements for viewing and manipulating the database by these key predictors of game theory performance. Moreover, comparisons between these predictors, especially average APM by age and average APM by competitive league (7 levels from Bronze to GrandMaster), is what interested me the most.
+
+Proposed Solution
+
+To make it easy for intended audience of StarCraft II fans, eSports casters, and YouTube content makers track competitive performance trends such as player's age, player's attained APM level, and player's attained competitive League level, amongst a variety of other factors such as Hours Per Week and Total Hours of training.
+
+The solution is a web application that takes in an evidence-based StarCraft II replay database from a 2013 study and that then provides interactive and reactive elements such as sliders and checkboxes for viewing and manipulating the database by key predictors of game theory performance, such as APM, player's age, and player's League level.
+
+--- bg:url(assets/img/sc2_2.png);background-size:cover
+
+## Main Solution
+
+The solution linked below is a multi-layered processing pipeline that juggles 7 different competitive leagues, age range between 16 and 44 years old, and APMs ranging from low 20s to high 300s. This Shiny Apps interactive user interface with reactive elements allows users such as Starcraft fans or eSports casters to swiftly and efficiently figure out and visualize average APM by specific age or league range and specification. This information can be used to predict tournament performance of professinoal eSports players based on the trends observed from key predictors such as APM, Age, and League placement.
+
+Please visit the Shiny Apps IO solution here: https://anuarimanbayev.shinyapps.io/DDP_Project
+
+--- bg:url(assets/img/sc2_3.png);background-size:cover
+
+## Simplified Solution
+
+A simplified display of this prediction's main calculations and classifications.
+
+Average APM by Age
+
+```r
+        playerage <- as.integer(28)        
+        # 10 individuals at 28 years old
+        playerapms <- c(24, 60, 78, 22, 136, 212, 321, 47, 95, 183)
+        avgAPMByAge <- mean(playerapms)
+```
+
+The 28-year old group of 10 individuals had an average APM of 117.8 actions per minute.
+
+Average APM by League
+
+```r
+        playerleague <- as.character("GrandMaster")
+        # 10 individuals at GrandMaster league level
+        playerapms <- c(150, 260, 277, 386, 133, 267, 245, 323, 72, 311)
+        avgAPMByLeague <- mean(playerapms)
+```
+
+The GrandMaster league group of 10 individuals had an average APM of 242.4 actions per minute.
+
+The main solution capitalizes on the deep implications of transforming such variables like apms, ages, and leagues into reactive values that allow for greater discoverability and flexibility of navigating visualization of replay performance data.
+
+--- bg:url(assets/img/sc2_championship2.png);background-size:cover
+
+## Summary
+
+Conclusions
+
+1. APM decreases with higher Age.
+Notable Outlier: There is an outlier at age 37 with 136.5
+Possible Explanation: Physical reaction time decreases slightly but steadily with advancing age
+2. APM increases with higher League placement
+Possible Explanation: To attain higher competitive Leagues, one must train to increase one's APM level. Higher APM usually means higher reaction time and higher micro-control play, but not necessarily higher strategic play.
+
+Future Directions
+
+Cover more predictors such as Hours Per Week and Total Hours of training, TotalMap Explored, Workers Made, Unique Units Made, Complex Units Made, and Complex Abilities used. I assume that these will be stronger predictors than the rest and am interested to find out whether they are or not.
+
+Feedback
+
+Please direct feedback to anuar.iman@gmail.com
+
+Thanks
+
+I hope this data science treatise of StarCraft II replay database sheds some visualization light for both StarCraft II fans and eSports casters alike on how much APM is affected by Age or by League level. Thanks you for your time and feedback!
