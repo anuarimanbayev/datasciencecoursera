@@ -152,11 +152,7 @@ groupByAPMLeagueAvg <- function(dt,  minAge, maxAge, minAPM,
         return(result)
 }
 
-<<<<<<< HEAD
 #' Plot average APM for each Age Group
-=======
-#' Plot average APM by Age group
->>>>>>> origin/master
 #' 
 #' @param dt data.table
 #' @param dom
