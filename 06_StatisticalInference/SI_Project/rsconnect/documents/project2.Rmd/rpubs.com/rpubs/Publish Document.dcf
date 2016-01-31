@@ -1,0 +1,7 @@
+name: Publish Document
+account: rpubs
+server: rpubs.com
+bundleId:
+        https://api.rpubs.com/api/v1/document/148586/35dcc23236b94f0a8a97e055976833b4
+url: http://rpubs.com/anuariman87/148586/edit
+when: 1454203021.9592

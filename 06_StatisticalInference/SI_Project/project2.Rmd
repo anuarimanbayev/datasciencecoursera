@@ -5,7 +5,7 @@ date: "January 30, 2016"
 output: html_document
 ---
 
-GitHub Link (PDF, Markdown, Html): 
+GitHub Link (PDF, Markdown, Html): https://github.com/anuarimanbayev/datasciencecoursera/tree/master/06_StatisticalInference/SI_Project
 
 ```{r global_options, include=FALSE}
 library(knitr)
