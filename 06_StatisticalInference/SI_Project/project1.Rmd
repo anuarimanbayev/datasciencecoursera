@@ -2,7 +2,7 @@
 title: "Statistical Inference Course Project 1"
 author: "Anuar Imanbayev"
 date: "January 30, 2016"
-output: html_document
+output: pdf_document
 ---
 
 GitHub Link (PDF, Markdown, Html): https://github.com/anuarimanbayev/datasciencecoursera/tree/master/06_StatisticalInference/SI_Project
